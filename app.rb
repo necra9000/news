@@ -13,7 +13,7 @@ get "/" do
   key = "eae067a11018332286c1cae364b5756e"
 
   # construct the URL to get the API data (https://openweathermap.org/api/one-call-api)
-  url = "https://api.openweathermap.org/data/2.5/onecall?lat=#{lat}&lon=#{long}&units=#{units}&appid=#{key}"
+  url = "https://api.openweathermap.org/data/2.5/onecall?lat=42.0574063&lon=-87.6722787&units=imperial&appid=eae067a11018332286c1cae364b5756e"
   @forecast = HTTParty.get(url).parsed_response.to_hash
     
     @current = ["Temperature: #{@forecast["current"]["temp"]} degrees", "Conditions: #{@forecast["current"]["weather"][0]["description"]}"]
@@ -31,7 +31,7 @@ get "/" do
   ### Get the news
 
   newskey = "f6dfd183082d4ec6b2e4181882398a51"
-  url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=#{newskey}"
+  url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=f6dfd183082d4ec6b2e4181882398a51"
   @news = HTTParty.get(url).parsed_response.to_hash
 
     stories = []
