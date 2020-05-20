@@ -1,16 +1,29 @@
 
+title {
+    font-family: 'Cormorant Garamond', serif;
+    color: black
+}
+
 h1 {
+    font-family: 'Cormorant Garamond', serif;
     text-decoration: underline;
 }
 
 h2 {
-    text-decoration: underline;
+    font-family: 'Cormorant Garamond', serif;
 }
 h3 {
-    text-decoration: underline;
+    font-family: 'Cormorant Garamond', serif;
 }
 h4 {
-    text-decoration: underline;
+    font-family: 'Cormorant Garamond', serif;
+}
+h5{
+    font-family: 'Cormorant Garamond', serif;
+}
+h6{
+    font-family: 'Cormorant Garamond', serif;
+    color: black
 }
 
 body {
