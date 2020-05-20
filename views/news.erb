@@ -38,8 +38,8 @@
         <p>
         <h4> "Today's Weather" </h4>
         </p>
-        <% for currcondition in @current %>
-            <p><%= currcondition %></p>
+        <% for todaysweather in @current %>
+            <p><%= todaysweather %></p>
         <% end %>
         </div>
 
@@ -54,11 +54,11 @@
 
     <hr class="my-4">
 
-    <div class="container mt-5">
+    <div class="container mt-4">
       <h1><i class="far fa-newspaper"></i>Top Headlines</h1>
     </div>
 
-        <div class="container mt-5">
+        <div class="container mt-4">
         <p>
         <% for story in @topstories %>
         <p><a href=<%= story %></a></p>
@@ -69,7 +69,7 @@
     <hr class="my-4">
 
     <div class="container footer">
-      <div class="row my-5">
+      <div class="row my-4">
         <div class="col-sm-6">
           <h6><a href=https://newsapi.org/>Source by News API</a></h6>
         </div>
