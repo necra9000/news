@@ -21,10 +21,7 @@ get "/" do
   
   ### Get the news
     # do everything else
-    view "weather"
-end
 
-get "/" do
   url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=f6dfd183082d4ec6b2e4181882398a51"
   @news = HTTParty.get(url).parsed_response.to_hash
   @top_headlines = @news.get_top_headlines(q: 'bitcoin',
