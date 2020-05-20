@@ -1,0 +1,23 @@
+Body {
+    background-color: black;
+}
+
+.white {
+    color: white;
+}
+
+.jumbotron {
+    /* Background */
+    background-attachment: fixed;
+    background-image: url(News2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pink {
+    color: pink;
+}
+
+.logo {
+    width: 50px
+}

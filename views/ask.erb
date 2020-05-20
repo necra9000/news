@@ -53,26 +53,31 @@
       </form>
     </div>
 
-    </div>
+        </div>
     </div>
 
     <div class="container white">
         <div class="row">
           <div class="col text-center">
-            <h2> In <%=@location %>, it is currently <%= @current_temperature %> and <%= @conditions %></h2>
+            <h2>Current News update</h2>
           </div>
         </div>
     </div>
 
+    <div class="container">
+          <% for update in @news["articles"] %> 
+            <p class="white">
+                <%= update["title"] %> 
+            </p>
+            <p class="white">
+                <a href="<%= update["url"] %>"><%= update["url"] %></a>
+            </p>
+        <% end %>
+    </div>  
 
-        <div class="container">
-            <% for day in @forecast["daily"]["data"] %> 
-                <p class="white">
-                    A high temperature of <%=day["temperatureHigh"] %> and <%= day["summary"] %>
-                </p>
-            <% end %>
-        </div>
-        
+    
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
