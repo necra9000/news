@@ -59,7 +59,7 @@
     <div class="container white">
         <div class="row">
           <div class="col text-center">
-            <h2> In <%=@location %>, it is currently <%= @current_temperature %> and <%= @conditions %></h2>
+            <h2> In Evanston, Illinois it is currently <%=day["current.temp"] %>
           </div>
         </div>
     </div>
@@ -68,7 +68,7 @@
         <div class="container">
             <% for day in @forecast["daily.temp"] %> 
                 <p class="white">
-                    A high temperature of <%=day["temperatureHigh"] %> and <%= day["summary"] %>
+                    A high temperature of <%=day["daily.temp.max"] %>
                 </p>
             <% end %>
         </div>
