@@ -1,5 +1,5 @@
 Body {
-    background-color: black;
+    background-color: white;
 }
 
 .white {
@@ -20,4 +20,9 @@ Body {
 
 .logo {
     width: 50px
+}
+
+h2 {
+    color: white
+    font-size: 45px
 }
