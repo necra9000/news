@@ -1,7 +1,6 @@
 require "sinatra"
 require "sinatra/reloader"
 require "httparty"
-require "geocoder"
 def view(template); erb template.to_sym; end
 
 get "/" do
@@ -19,7 +18,6 @@ get "/" do
   # make the call
   @forecast = HTTParty.get(url).parsed_response.to_hash
   
-  view "ask"
   ### Get the news
     # do everything else
     view "news"
