@@ -24,11 +24,6 @@ get "/" do
 
   url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=f6dfd183082d4ec6b2e4181882398a51"
   @news = HTTParty.get(url).parsed_response.to_hash
-  @top_headlines = @news.get_top_headlines(q: 'bitcoin',
-                                          sources: 'bbc-news,the-verge',
-                                          category: 'business',
-                                          language: 'en',
-                                          country: 'us')
   # news is now a Hash you can pretty print (pp) and parse for your output
   view "weather"
 end
