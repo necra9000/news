@@ -10,7 +10,7 @@ get "/" do
   long = -87.6722787
 
   units = "imperial"
-  key = "bf5db749a33df8a2d1ed89fb1a48b53b"
+  key = "eae067a11018332286c1cae364b5756e"
 
   # construct the URL to get the API data (https://openweathermap.org/api/one-call-api)
   url = "https://api.openweathermap.org/data/2.5/onecall?lat=#{lat}&lon=#{long}&units=#{units}&appid=#{key}"
