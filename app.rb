@@ -10,7 +10,7 @@ get "/" do
   long = -87.6722787
 
   units = "imperial"
-  key = "eae067a11018332286c1cae364b5756e"
+  openweather_key = "eae067a11018332286c1cae364b5756e"
 
   # construct the URL to get the API data (https://openweathermap.org/api/one-call-api)
   url = "https://api.openweathermap.org/data/2.5/onecall?lat=42.0574063&lon=-87.6722787&units=imperial&appid=eae067a11018332286c1cae364b5756e"
@@ -30,7 +30,7 @@ get "/" do
 
   ### Get the news
 
-  newskey = "f6dfd183082d4ec6b2e4181882398a51"
+  news_key = "f6dfd183082d4ec6b2e4181882398a51"
   url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=f6dfd183082d4ec6b2e4181882398a51"
   @news = HTTParty.get(url).parsed_response.to_hash
 
@@ -41,7 +41,7 @@ get "/" do
         article_number = article_number + 1
     end
 
-    @topstories = stories[0,10]
+    @topstories = stories[0,5]
 
     view "news"
 end
