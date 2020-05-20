@@ -18,7 +18,7 @@
     <!-- Your own CSS -->
     <link rel="stylesheet" href="/styles.css">
 
-    <title>News</title>
+    <title>Weather</title>
   </head>
   <body>
 
@@ -45,25 +45,6 @@
         <div class="container pink">
           <h1 class="display-4">Welcome to Awesome Website</h1 class="display-4">
           <p class="lead">Here, you will find current news and weather forecast for the location of your choice!</p>
-          
-    <div class="container mt-5">
-      <form action="/news">
-        <input type="text" name="q">
-        <button type="submit">Find your location</submit>
-      </form>
-    </div>
-
-    </div>
-    </div>
-
-    <div class="container white">
-        <div class="row">
-          <div class="col text-center">
-            <h2> In Evanston, Illinois it is currently <%=day["current.temp"] %>
-          </div>
-        </div>
-    </div>
-
 
         <div class="container">
             <% for day in @forecast["daily.temp"] %> 
