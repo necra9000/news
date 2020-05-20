@@ -9,13 +9,13 @@ Body {
 .jumbotron {
     /* Background */
     background-attachment: fixed;
-    background-image: url(News2.jpg);
+    background-image: url(News2.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.pink {
-    color: pink;
+.white {
+    color: rgb(255, 255, 255);
 }
 
 .logo {
