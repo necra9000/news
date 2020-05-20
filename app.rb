@@ -18,20 +18,24 @@ get "/" do
     
     @current = ["Temperature: #{@forecast["current"]["temp"]} degrees", "Conditions: #{@forecast["current"]["weather"][0]["description"]}"]
     puts @current
-    puts "8 Day Extended forecast:"
+    puts "Weekly Forecast:"
     extended = []
     day_number = 1
     for day in @forecast["daily"]
-        extended << "#{day_number} Days Out: #{day["weather"][0]["description"]} with a high of #{day["temp"]["max"]} degrees and a low of #{day["temp"]["min"]} degrees"
+        extended << "#{day_number} Day: #{day["weather"][0]["description"]} with a Max temperature of #{day["temp"]["max"]} F and a Min temperature of #{day["temp"]["min"]} F"
         day_number = day_number + 1
+
     end
 
     @weekly = extended[0, 7]
 
+
   ### Get the news
 
   news_key = "f6dfd183082d4ec6b2e4181882398a51"
+
   url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=f6dfd183082d4ec6b2e4181882398a51"
+
   @news = HTTParty.get(url).parsed_response.to_hash
 
     stories = []
@@ -39,6 +43,7 @@ get "/" do
     for article in @news["articles"]
         stories << "#{article["url"]}>#{article_number}: #{article["title"]}" 
         article_number = article_number + 1
+        
     end
 
     @topstories = stories[0,5]
