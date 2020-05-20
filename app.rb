@@ -17,6 +17,7 @@ get "/" do
 
   # make the call
   @forecast = HTTParty.get(url).parsed_response.to_hash
-
+  
+  view "news"
   ### Get the news
 end
