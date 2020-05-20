@@ -1,6 +1,7 @@
 require "sinatra"
 require "sinatra/reloader"
 require "httparty"
+require "geocoder"
 def view(template); erb template.to_sym; end
 
 get "/" do
@@ -20,4 +21,12 @@ get "/" do
   
   view "ask"
   ### Get the news
+    # do everything else
+    @location = params["q"]
+    results = Geocoder.search("q")
+    @lat_lon = results.first.coordinates #=> [42.0574063,-87.6722787]
+    @current_temperature = @forecast["current.temp]
+    @conditions= @forecast["current"]
+
+    view "news"
 end
