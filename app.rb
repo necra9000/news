@@ -23,9 +23,9 @@ get "/" do
     view "weather"
 end
 
-get "/" do
+get "/news" do
 url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=f6dfd183082d4ec6b2e4181882398a51"
-news = HTTParty.get(url).parsed_response.to_hash
+@news = HTTParty.get(url).parsed_response.to_hash
 # news is now a Hash you can pretty print (pp) and parse for your output
  view "news"
 end
