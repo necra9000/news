@@ -26,7 +26,7 @@ get "/" do
         day_number = day_number + 1
     end
 
-    @extfcast = extended[0, 7]
+    @weekly = extended[0, 7]
 
   ### Get the news
 
