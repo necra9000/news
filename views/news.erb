@@ -18,42 +18,13 @@
     <!-- Your own CSS -->
     <link rel="stylesheet" href="/styles.css">
 
-    <title>Weather</title>
+    <title>News</title>
   </head>
   <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-        <a class="navbar-brand" href="/">
-            <img src="news.jpg" class="logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
-            </li>
-        </div>
-      </nav>
-
-    <!-- Full width Jumbotron -->
-    <!-- https://getbootstrap.com/docs/4.4/components/jumbotron/ -->
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container pink">
-          <h1 class="display-4">Welcome to Awesome Website</h1 class="display-4">
-          <p class="lead">Here, you will find current news and weather forecast for the location of your choice!</p>
-
-        <div class="container">
-            <% for day in @forecast["daily.temp"] %> 
-                <p class="white">
-                    A high temperature of <%=day["daily.temp.max"] %>
-                </p>
-            <% end %>
-        </div>
-        
+    <div class="container mt-5">
+      <h1>News</h1>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
